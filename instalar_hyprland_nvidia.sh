@@ -32,12 +32,14 @@ yay -S hyprland-git
 # Crear directorio de configuración para Hyprland si no existe
 mkdir -p ~/.config/hypr/
 
-# Crear un archivo de configuración básico para Hyprland
+# Crear un archivo de configuración básico para Hyprland con recomendaciones para NVIDIA
 cat <<EOL > ~/.config/hypr/hyprland.conf
 # Configuración básica para Hyprland
 general {
     # Selecciona la pantalla predeterminada
     monitor = 0
+    # Habilitar variable de entorno recomendada para NVIDIA
+    export WLR_NO_HARDWARE_CURSORS=1
 }
 
 input {
